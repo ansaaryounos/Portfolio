@@ -2,8 +2,8 @@ const humanPlayer = 'h_marked';
 const aiPlayer = 'a_marked';
 const clickable = 'unmarked';
 
-const h_img = '/img/404/four.png';
-const a_img = '/img/404/zero.png';
+const h_img = '/Portfolio/img/404/four.png';
+const a_img = '/Portfolio/img/404/zero.png';
 
 const combs = [
     [0,1,2], 
