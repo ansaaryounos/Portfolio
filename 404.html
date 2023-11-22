@@ -11,51 +11,63 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900
+            &family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!--Webpage Title & Favicon-->
-  <title>Error 404</title>
+  <title>Page Not Found</title>
 
 </head>
 
 <body>
 
-    <table>
-        <tr>
-            <td class="cell hover" id="0" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="0p" class="mark">
-            </td>
-            <td class="cell hover" id="1" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="1p" class="mark">
-            </td>
-            <td class="cell hover" id="2" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="2p" class="mark">
-            </td>
-        </tr>
-        <tr>
-            <td class="cell hover" id="3" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="3p" class="mark">
-            </td>
-            <td class="cell hover" id="4" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="4p" class="mark">
-            </td>
-            <td class="cell hover" id="5" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="5p" class="mark">
-            </td>
-        </tr>
-        <tr>
-            <td class="cell hover" id="6" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="6p" class="mark">
-            </td>
-            <td class="cell hover" id="7" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="7p" class="mark">
-            </td>
-            <td class="cell hover" id="8" data-marked="unmarked">
-                <img src="img/404/four.png" draggable="false" id="8p" class="mark">
-            </td>
-        </tr>
-    </table>
+    <div class="game-container">
+        <table>
+            <tr>
+                <td class="cell hover" id="0" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="0p" class="mark">
+                </td>
+                <td class="cell hover" id="1" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="1p" class="mark">
+                </td>
+                <td class="cell hover" id="2" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="2p" class="mark">
+                </td>
+            </tr>
+            <tr>
+                <td class="cell hover" id="3" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="3p" class="mark">
+                </td>
+                <td class="cell hover" id="4" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="4p" class="mark">
+                </td>
+                <td class="cell hover" id="5" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="5p" class="mark">
+                </td>
+            </tr>
+            <tr>
+                <td class="cell hover" id="6" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="6p" class="mark">
+                </td>
+                <td class="cell hover" id="7" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="7p" class="mark">
+                </td>
+                <td class="cell hover" id="8" data-marked="unmarked">
+                    <img src="img/404/four.png" draggable="false" id="8p" class="mark">
+                </td>
+            </tr>
+        </table>
 
-    <button onclick="window.location.reload();" style="margin-top: 100px;">Replay</button>
+        <div class="text-container">
+            <h1>Error - Page Not Found</h1>
+            <h2>Silly housekeeping forgot to tidy up here. Play a game of Tic-Tac-Toe and then go back <a href="index.html">home.</a></h2>
+            <h2 id="Result"></h2>
+        </div>
+
+        <h2 id="Result"></h2>
+
+        <button onClick="window.location.reload();">Restart</button>
+    </div>
 
     <script src="404.js"></script>
 </body>

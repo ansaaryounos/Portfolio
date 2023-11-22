@@ -77,9 +77,17 @@ function IsVictory(cells) {
                 if (!aiCalculting) {
 
                     setTimeout(()=> {
-                        cells[comb[0]].style.backgroundColor = '#353535';
-                        cells[comb[1]].style.backgroundColor = '#353535';
-                        cells[comb[2]].style.backgroundColor = '#353535';
+                        cells[comb[0]].style.backgroundColor = '#252525';
+                        cells[comb[1]].style.backgroundColor = '#252525';
+                        cells[comb[2]].style.backgroundColor = '#252525';
+
+                        if (!playerWin) {
+                            document.getElementById("Result").innerHTML = "It's okay, you can try again.";
+                        } else if (playerWin) {
+                            document.getElementById("Result").innerHTML = "You're a real winner!";
+                        }
+
+
                     }, 1000)
 
                     canClick = false;
