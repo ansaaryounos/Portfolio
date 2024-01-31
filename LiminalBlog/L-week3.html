@@ -43,22 +43,22 @@
       <p>This week at Liminal VR was filled with lots of triumphs, challenges and creative solutions. From importing the models to grappling with compatibility issues, there was quite a lot to tackle. Unity development was still charging forward, as the experience became closer and closer to its end goal with the collaborative work of everyone on the team.</p>
       <br>
       <p>To kick the week off, I began by exporting the animated humanoid models from Blender, the 3D modelling software I used to animate them, and importing them into Unity. The humans were all positioned across the floor of the experience space to form a crowd, all of them in their default sitting positions. The empty mat in the middle is the player’s.</p>
-      <img src="/Liminal Blog/img/crowd.png">
+      <img src="/Portfolio/LiminalBlog/img/crowd.png">
       <div class="caption"><label>- The arrangement of the crowd -</label></div>
       <br>
       <p>Each of them was given a Unity ‘Animator Controller’, which allows me to directly program when and how each of their laying down animations is triggered. It is done using flowcharts where animations are moved from one to the other based on the set of predefined parameters on the left-hand side.</p>
-      <img src="/Liminal Blog/img/anim_controller.png">
+      <img src="/Portfolio/LiminalBlog/img/anim_controller.png">
       <div class="caption"><label>- Flow of animations for the crowd -</a></label></div>
       <br>
       <p>The following code was written to ensure that each person has a random pose of the 3 that was animated, they lay down when required with the addition of a slight random offset for a more natural feel. This prevents them from all synchronously laying down like robots.</p>
-      <img src="/Liminal Blog/img/anim_Code1.png">
-      <img src="/Liminal Blog/img/anim_Code2.png">
+      <img src="/Portfolio/LiminalBlog/img/anim_Code1.png">
+      <img src="/Portfolio/LiminalBlog/img/anim_Code2.png">
       <div class="caption"><label>- The code used to control the animations -</a></label></div>
       <br>
       <p>Toward the middle of the week, we found out that Unity’s default post-processing stack was not allowing us to export and package the project as it did not align with Liminal’s SDK and guidelines. After having followed up with the creative director, David Rosalion, he shared that Liminal avoids using any sort of post-processing as it is too intensive for the VR hardware. We were advised to unfortunately find a work-around, or live without it. The majority of the project's visuals and refinements relied on the post-processing feature, so this was a tough pill to swallow.</p>
       <br>
       <p>In order to combat this, we removed the post-processing feature and replaced Unity’s default render pipeline with the ‘Lightweight Render Pipeline’ which offers better visuals with less intensive computation, therefore making it performance-friendly. Although some effects of the post-processing stack could not be replicated altogether, some I was able to recreate in another way. The bloom effect, for example, is what allows the emissive surfaces to bleed and blur out, creating the effect of lighting when seen in the fog. This was recreated by placing fake, blurry bloom textures over the light sources. The results are as follows.</p>
-      <img src="/Liminal Blog/img/fakebloom.png">
+      <img src="/Portfolio/LiminalBlog/img/fakebloom.png">
       <div class="caption"><label>- A faked bloom effect using textures -</a></label></div>
       <br>
       <p>With the addition of the new render pipeline, it meant that the lighting, environmental colours and fog had to be adjusted. I adjusted the floor fog to become much heavier, enough to occlude the people far away in the crowd, and also hinted everything to become blue, further developing the atmosphere of the experience. I also refined the distance fog to match that of the floor as much as possible, to create a seamless transition from the foreground to the distance. With all of these changes in place, as well as the addition of the animated humans, this is what the experience has come to look like so far.</p>
