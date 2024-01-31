@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <!--Linking Stylesheet & Fonts-->
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="L-blog.css">
+  <link rel="icon" type="image/x-icon" href="img/Icons/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900
+            &family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!--Webpage Title & Favicon-->
+  <title>Liminal Blog - Week 2</title>
+
+</head>
+
+<body>
+
+  <div id="navbar-main-container">
+    
+    <div id="home-icon-container" onclick="window.open('index.html', '_self')">
+      <svg id="home-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="navbar-element">
+        <path id="Stem" class="icon" d="M917.38,320.22l232.34,451.26c-41.57,0-84.33-22.29-105.86-59.37-20.14-34.68-43.26-90.86-43.26-90.86L926.88,771.48c-23.56-32.61-34.2-95.19-10.42-139.93,14.58-27.43,46.75-83.76,46.75-83.76l-81.52-169.7c-83.1-1.15-98.34-57.87-98.34-57.87Z" transform="translate(-707.65 -317.72)"/>
+        <path id="Y" class="icon" d="M1007.83,456l67.61-135.8h132.84c-14.82,56.63-91.92,61.08-91.92,61.08L1043.41,526Z" transform="translate(-707.65 -317.72)"/>
+        <path id="A" class="icon" d="M711.87,771.48,886.89,435l37.68,77.5S842,670.72,823.38,705.53,768.65,768.9,711.87,771.48Z" transform="translate(-707.65 -317.72)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <div>
+      <h1>Week Two</h1>
+      <div class="progress">
+        <h3>08.01.24  -  12.01.24</h3>
+        <h3>56 / 200 Hours Completed</h3>
+      </div>
+      <br>
+      <p>This week at Liminal VR, I was able to get into the heart of Unity development, where my primary role as an intern with extensive Unity experience came to the forefront. I delved into programming, fine-tuning the render pipeline, and bringing the virtual crowd to life. I explored a range of ideas in relation to project creativity, accessibility and visual enhancements. Alongside me, the other interns took care of the 3D modelling, audio etc. We had a meeting on Monday morning to catch up at the beginning of the week, and to set ourselves up for the rest of it. </p>
+      <br>
+      <p>With the responsibility of managing the internal workings of the Unity project, I took charge of the programming tasks. During the last meeting, I introduced the idea of adding subtitles to the experience in order to assist those who are hard of hearing and also to properly guide the user throughout the experience. Utilising C# & Unity’s API, I programmed the subtitle system into our project, which follows the user's eyes in the virtual realm as they have the headset on. The subtitle system effectively displays the dialogue lines along with their associated narration sound effects after a specified duration. I made it user-friendly in order for my fellow interns to implement the dialogue seamlessly, and provided visual instructions that showed them how to.</p>
+      <iframe width="315" height="560"
+        src="https://www.youtube.com/embed/YDDM72EBpoc"
+        title="YouTube video player" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media;gyroscope; picture-in-picture;web-share"allowfullscreen>
+      </iframe>
+      <div class="caption"><label>- A video testing the subtitle system -</label></div>
+      <img src="/Liminal Blog/img/subtitle.png">
+      <div class="caption"><label>- Subtitle Instructions for other Interns -</label></div>
+      <br>
+      <p>As the Unity scene was made of hard, erratic, and non-pleasing visuals at the beginning of the project, some light post-processing was done in order to beautify the virtual environment and make developing within pleasant. I imported Unity’s post-processing package into the project and played around with a range of different after-effects, such as bloom effects, vignettes, colour grading etc.</p>
+      <img src="/Liminal Blog/img/postprocessing.png">
+      <div class="caption"><label>- The Unity Project with Post Processing Enabled -</a></label></div>
+      <br>
+      <p>To create a calming and moody ambience, the team collectively decided on the introduction of fog into the scene. Leveraging Unity’s particle system, I crafted an ethereal fog that slowly glides across the floor, adding an immersive touch to the environment and also blurring out the details of the floor, so as to save any focus on refining it. Additionally, the distant fog was implemented to gently blur out the horizon, inviting the player’s focus where it truly belongs, among the stars on the ceiling.</p>
+      <img src="/Liminal Blog/img/fogs.png">
+      <div class="caption"><label>- The fog was added to the Unity Scene -</a></label></div>
+      <br>
+      <p>Towards the end of the week, I received some T-posed basic 3D models of a human from one of my peers, which will be used to ultimately make up the humanoid crowd that surrounds the user. They are a pivotal element in the stargazing experience as they guide the user through the required bodily motions and positions throughout the experience, and take away that sense of chilling loneliness. Acting as a digital puppeteer, I commenced rigging the models, (giving them ‘bones & joints’) in order to prepare them for animation. To not look so orchestrated, I decided that if the crowd shared a mix of 3 different sitting poses at the beginning of the experience, it would suffice. So I posed an animated three different seated poses, that all collectively recline in harmony with the player before they are advised to view the spectacle that awaits.</p>
+      <img src="/Liminal Blog/img/rig.png">
+      <div class="caption"><label>- Added a modifiable skeleton to the 3D model -</a></label></div>
+      <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/po90EmLnl28" frameborder="0"> 
+      </iframe>
+      <div class="caption"><label>- Animated the 3 different crowd poses -</a></label></div>
+      <br>
+      <p>It was a very busy and technical week at Liminal VR, where I was able to properly refine some of my skills to an industry standard, and collaboratively work with my peers by preparing the project and assets for each other, driving development. This coming Monday will determine what will be the focus for the week ahead, but I believe it will be importing the humanoids into the Unity project and programming their animations. </p>
+    </div>
+
+    <br>
+
+    <a href="/liminal.html" id="non-line"><button class="see-more">Go Back</button></a>
+
+  </div>
+
+</body>

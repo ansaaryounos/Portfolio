@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <!--Linking Stylesheet & Fonts-->
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="L-blog.css">
+  <link rel="icon" type="image/x-icon" href="img/Icons/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900
+            &family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!--Webpage Title & Favicon-->
+  <title>Liminal Blog - Week 3</title>
+
+</head>
+
+<body>
+
+  <div id="navbar-main-container">
+    
+    <div id="home-icon-container" onclick="window.open('index.html', '_self')">
+      <svg id="home-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="navbar-element">
+        <path id="Stem" class="icon" d="M917.38,320.22l232.34,451.26c-41.57,0-84.33-22.29-105.86-59.37-20.14-34.68-43.26-90.86-43.26-90.86L926.88,771.48c-23.56-32.61-34.2-95.19-10.42-139.93,14.58-27.43,46.75-83.76,46.75-83.76l-81.52-169.7c-83.1-1.15-98.34-57.87-98.34-57.87Z" transform="translate(-707.65 -317.72)"/>
+        <path id="Y" class="icon" d="M1007.83,456l67.61-135.8h132.84c-14.82,56.63-91.92,61.08-91.92,61.08L1043.41,526Z" transform="translate(-707.65 -317.72)"/>
+        <path id="A" class="icon" d="M711.87,771.48,886.89,435l37.68,77.5S842,670.72,823.38,705.53,768.65,768.9,711.87,771.48Z" transform="translate(-707.65 -317.72)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <div>
+      <h1>Week Three</h1>
+      <div class="progress">
+        <h3>15.01.24  -  19.01.24</h3>
+        <h3>84 / 200 Hours Completed</h3>
+      </div>
+      <br>
+      <p>This week at Liminal VR was filled with lots of triumphs, challenges and creative solutions. From importing the models to grappling with compatibility issues, there was quite a lot to tackle. Unity development was still charging forward, as the experience became closer and closer to its end goal with the collaborative work of everyone on the team.</p>
+      <br>
+      <p>To kick the week off, I began by exporting the animated humanoid models from Blender, the 3D modelling software I used to animate them, and importing them into Unity. The humans were all positioned across the floor of the experience space to form a crowd, all of them in their default sitting positions. The empty mat in the middle is the player’s.</p>
+      <img src="/Liminal Blog/img/crowd.png">
+      <div class="caption"><label>- The arrangement of the crowd -</label></div>
+      <br>
+      <p>Each of them was given a Unity ‘Animator Controller’, which allows me to directly program when and how each of their laying down animations is triggered. It is done using flowcharts where animations are moved from one to the other based on the set of predefined parameters on the left-hand side.</p>
+      <img src="/Liminal Blog/img/anim_controller.png">
+      <div class="caption"><label>- Flow of animations for the crowd -</a></label></div>
+      <br>
+      <p>The following code was written to ensure that each person has a random pose of the 3 that was animated, they lay down when required with the addition of a slight random offset for a more natural feel. This prevents them from all synchronously laying down like robots.</p>
+      <img src="/Liminal Blog/img/anim_Code1.png">
+      <img src="/Liminal Blog/img/anim_Code2.png">
+      <div class="caption"><label>- The code used to control the animations -</a></label></div>
+      <br>
+      <p>Toward the middle of the week, we found out that Unity’s default post-processing stack was not allowing us to export and package the project as it did not align with Liminal’s SDK and guidelines. After having followed up with the creative director, David Rosalion, he shared that Liminal avoids using any sort of post-processing as it is too intensive for the VR hardware. We were advised to unfortunately find a work-around, or live without it. The majority of the project's visuals and refinements relied on the post-processing feature, so this was a tough pill to swallow.</p>
+      <br>
+      <p>In order to combat this, we removed the post-processing feature and replaced Unity’s default render pipeline with the ‘Lightweight Render Pipeline’ which offers better visuals with less intensive computation, therefore making it performance-friendly. Although some effects of the post-processing stack could not be replicated altogether, some I was able to recreate in another way. The bloom effect, for example, is what allows the emissive surfaces to bleed and blur out, creating the effect of lighting when seen in the fog. This was recreated by placing fake, blurry bloom textures over the light sources. The results are as follows.</p>
+      <img src="/Liminal Blog/img/fakebloom.png">
+      <div class="caption"><label>- A faked bloom effect using textures -</a></label></div>
+      <br>
+      <p>With the addition of the new render pipeline, it meant that the lighting, environmental colours and fog had to be adjusted. I adjusted the floor fog to become much heavier, enough to occlude the people far away in the crowd, and also hinted everything to become blue, further developing the atmosphere of the experience. I also refined the distance fog to match that of the floor as much as possible, to create a seamless transition from the foreground to the distance. With all of these changes in place, as well as the addition of the animated humans, this is what the experience has come to look like so far.</p>
+      <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/rBJIGbKK_ts" frameborder="0"> 
+      </iframe>
+      <div class="caption"><label>- Combination of everything so far -</a></label></div>
+      <br>
+      <p>It’s been a busy week at Liminal, trying to recover from the loss of our post-processing, but the experience is looking good again after some creative problem-solving and hard work. We have a team meeting on Monday to discuss what the plan is for the week ahead.</p>
+    </div>
+    <br>
+
+    <a href="/liminal.html" id="non-line"><button class="see-more">Go Back</button></a>
+
+  </div>
+
+</body>
