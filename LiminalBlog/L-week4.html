@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <!--Linking Stylesheet & Fonts-->
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="L-blog.css">
+  <link rel="icon" type="image/x-icon" href="img/Icons/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900
+            &family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!--Webpage Title & Favicon-->
+  <title>Liminal Blog - Week 4</title>
+
+</head>
+
+<body>
+
+  <div id="navbar-main-container">
+    
+    <div id="home-icon-container" onclick="window.open('index.html', '_self')">
+      <svg id="home-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="navbar-element">
+        <path id="Stem" class="icon" d="M917.38,320.22l232.34,451.26c-41.57,0-84.33-22.29-105.86-59.37-20.14-34.68-43.26-90.86-43.26-90.86L926.88,771.48c-23.56-32.61-34.2-95.19-10.42-139.93,14.58-27.43,46.75-83.76,46.75-83.76l-81.52-169.7c-83.1-1.15-98.34-57.87-98.34-57.87Z" transform="translate(-707.65 -317.72)"/>
+        <path id="Y" class="icon" d="M1007.83,456l67.61-135.8h132.84c-14.82,56.63-91.92,61.08-91.92,61.08L1043.41,526Z" transform="translate(-707.65 -317.72)"/>
+        <path id="A" class="icon" d="M711.87,771.48,886.89,435l37.68,77.5S842,670.72,823.38,705.53,768.65,768.9,711.87,771.48Z" transform="translate(-707.65 -317.72)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <div>
+      <h1>Week Three</h1>
+      <div class="progress">
+        <h3>22.01.24  -  26.01.24</h3>
+        <h3>112 / 200 Hours Completed</h3>
+      </div>
+      <br>
+      <p>This week was a slow week at Liminal as we were primarily trying to resolve some design decisions that weren’t working. We kicked the week off with a productive team meeting. Because everyone is working remotely online, we had decided to reserve ourselves a room on RMIT’s campus and meet in person. We reviewed what we had achieved together so far as a team, and what the coming weeks will bring. Some of the other interns also brought in their Oculus VR headsets, which allowed me to try the experience for myself.</p>
+      <br>
+      <img src="/Portfolio/LiminalBlog/img/meeting.png">
+      <div class="caption"><label>- The team at RMIT -</label></div>
+      <br>
+      <p>One of the biggest issues that we discussed was in regards to the flight path of the shooting star that forms the constellations on the ceiling. We had to address questions such as, how frequently should it be bouncing around, how fast the star should be flying, how often a constellation should be formed etc. We agreed for another flight path to be drafted, with completely different feel to mine, so that we could see what works and gather the best of both worlds. It was drafted by another intern, who sent it to me for review. After having reviewed it, I noticed an instance where the shooting star actually passed through a constellation, where in fact it was supposed to bounce through. I highlighted the mistake to show him, and he had it adjusted and resolved. We decided to send both flight paths to Adam the supervisor, who can offer his psychology-background’s wisdom to see which would create the more calming effect.</p>
+      <img src="/Portfolio/LiminalBlog/img/comparison.png">
+      <div class="caption"><label>- The two flight path plans -</a></label></div>
+      <br>
+      <p>In order to properly demonstrate the constellations are to be formed by the shooting star, to showcase what I had in mind for my fellow interns, I fired up Blender3D. Using this software, I used one of the flight maps as a reference and animated the formation of a constellation using Blender’s animation tools. This was the first time an animation of the constellation forming was drafted, which was incredibly well received by my fellow interns, specifically the trail of sparkles left behind the flying star.</p>
+      <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/5LkFSJYmS5E" frameborder="0"> 
+      </iframe>
+      <div class="caption"><label>- Close up animation of constellation -</a></label></div>
+      <br>
+      <p>Another issue that had to be tackled during the week was the clash caused by the Unity’s fog system and the windows of the planetarium. In order to create fog, what unity does is take all surrounding mesh, and add a blurred overlay of colour (fog) depending on the distance from the player camera. However, as all of the planetariums windows were cut out, it did not count as mesh for unity, therefore it created a staggering contrast of fog and clearness when it came to the windows. In order to overcome the issue, the windows were given a mesh window pane, but the opacity was reduced for it to still render as a transparent surface. The before and after can be seen below.</p>
+      <br>
+      <img src="/Portfolio/LiminalBlog/img/windows.png">
+      <div class="caption"><label>- Before and after of windows -</a></label></div>
+      <br>
+      <p>Another idea that I had based on inspiration I came across online was also well received by the group, which they decided to work on implementing right away. This was to create a glowing starry texture on the ceiling to really bring a sense of awe to the planetarium. The reference image that inspired me is below, alongside a quick photoshop of what I had in mind, as my fellow intern will be texturing it using Substance Painter.</p>
+      <img src="/Portfolio/LiminalBlog/img/starry.png">
+      <div class="caption"><label>- The inspiration and the mock up -</a></label></div>
+      <br>
+      <p>To finish the week off, I opened up blender once again and tried modelling another version of the planetarium interior, just to explore a couple of ideas that were floating around the back of my mind. Although it looked nice on it’s own, it didn’t seem too fitting for the experience, compared to what we had developed already.</p>
+      <img src="/Portfolio/LiminalBlog/img/interior.png">
+      <div class="caption"><label>- Interior prototype -</a></label></div>
+    </div>
+    <br>
+
+    <a href="/Portfolio/liminal.html" id="non-line"><button class="see-more">Go Back</button></a>
+
+  </div>
+
+</body>
