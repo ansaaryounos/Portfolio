@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <!--Linking Stylesheet & Fonts-->
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="L-blog.css">
+  <link rel="icon" type="image/x-icon" href="img/Icons/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900
+            &family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!--Webpage Title & Favicon-->
+  <title>Liminal Blog - Week 5</title>
+
+</head>
+
+<body>
+
+  <div id="navbar-main-container">
+    
+    <div id="home-icon-container" onclick="window.open('index.html', '_self')">
+      <svg id="home-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="navbar-element">
+        <path id="Stem" class="icon" d="M917.38,320.22l232.34,451.26c-41.57,0-84.33-22.29-105.86-59.37-20.14-34.68-43.26-90.86-43.26-90.86L926.88,771.48c-23.56-32.61-34.2-95.19-10.42-139.93,14.58-27.43,46.75-83.76,46.75-83.76l-81.52-169.7c-83.1-1.15-98.34-57.87-98.34-57.87Z" transform="translate(-707.65 -317.72)"/>
+        <path id="Y" class="icon" d="M1007.83,456l67.61-135.8h132.84c-14.82,56.63-91.92,61.08-91.92,61.08L1043.41,526Z" transform="translate(-707.65 -317.72)"/>
+        <path id="A" class="icon" d="M711.87,771.48,886.89,435l37.68,77.5S842,670.72,823.38,705.53,768.65,768.9,711.87,771.48Z" transform="translate(-707.65 -317.72)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <div>
+      <h1>Week Five</h1>
+      <div class="progress">
+        <h3>29.01.24  -  02.02.24</h3>
+        <h3>150 / 200 Hours Completed</h3>
+      </div>
+      <br>
+      <p>This week with Liminal was all problems, and how we were going to address and tackle these. We were scheduled to have our weekly meeting on Monday but before anybody could arrive, there was a large issue with the git repository that had caused the main unity scene to be deleted from half of my fellow intern’s computers. This could have happened due to conflicting changes to the project that were uploaded at the same time by the interns. At this point, we were so thankful to have made the proactive decision of setting up the GitHub repository in the first place, as I was able to revert the changes back to the last viable commit on the repository and restore the deleted data.</p>
+      <br>
+      <img src="/Portfolio/LiminalBlog/img/repo_mess.png">
+      <div class="caption"><label>- Trying to save the project -</label></div>
+      <br>
+      <p>After that, we were able to have our meeting. One of the first topics of conversation was in regard to the flight of the shooting star on the ceiling. We received the following feedback from our supervisor.</p>
+      <img src="/Portfolio/LiminalBlog/img/adam_feedback.png">
+      <div class="caption"><label>- Feedback from our supervisor -</a></label></div>
+      <br>
+      <p>In response to this feedback, we decided the best way to go about it was to utilise the more convoluted flight path as it offered lots more bounces, and with it came suspense and satisfaction. However, we were able to manage the duration of the experience by slowing down the shooting star. A couple of other things were addressed in the meeting as well in regard to the development of the planetarium, such as refining the models and fixing the textures. The intern who was responsible for creating the texture for the starry ceiling had made it in colour, so I brought up the idea for him to make it grayscale so I could adjust and manipulate the colours of the stars in unity. The team was happy with my idea and left it with me to program.</p>
+      <br>
+      <p>During the week, before I could get into any meaningful work, another issue was raised. One of the fellow interns took the initiative to clean the project by deleting any unnecessary files, but unfortunately deleted the root files that the crowd of people were made of. Those changes were pushed to the repository, and many more after that. As a result, the people had all disappeared from the project. As the one who set it up in the first place, it was up to me to bring them back, which took a great chunk out of my week. But alas, the crowd had returned.</p>
+      <br>
+      <p>After that was dealt with, the next thing for me to tackle was to randomise the lighting of both the area light, the fog, and ambient lighting in order to create that calming, colourful sound-bath experience as noted in the project’s design documentation This was done programmatically, via the following code which is explained in the green comments.</p>
+      <img src="/Portfolio/LiminalBlog/img/fog_code.png">
+      <div class="caption"><label>- The code that controls the surround fog -</a></label></div>
+      <br>
+      <img src="/Portfolio/LiminalBlog/img/light_code.png">
+      <div class="caption"><label>- The code that controls the light and distance fog -</a></label></div>
+      <br>
+      <p>The changes above yielded the following results. A strong transition from a basic waiting stage to the actual experience.</p>
+      <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/yXCTXXd4CuU" frameborder="0"> 
+      </iframe>
+      <div class="caption"><label>- Changing from the normal state to the experience -</a></label></div>
+      <br>
+      <p>Toward the end of the week, for the first time since beginning the project, we were able to get some feedback from one of the senior developers at Liminal. It wasn't very good. The biggest problems with the project were in regards to its poor performance and visual inconsistencies. More detailed notes and feedback can be read in the snapshot of the email below.</p>
+      <img src="/Portfolio/LiminalBlog/img/david_feedback.png">
+      <div class="caption"><label>- Crushing feedback from Liminal developer -</a></label></div>
+      <br>
+      <p>This brought a lot of concerns to the current state of the project, as we were approaching the end of our development timeline. In regards to the poor FPS, it was most likely due to the amount of surrounding fog in the scene, which was an incredibly large factor in adding to the experience. Unfortunately, it had to go, which heavily detracted from our ‘sound-bath’ experience. In regards to the visuals, the floor mats lacked detail so we need to brainstorm what to replace them with And the entire building was looking ‘organic’. Verbal conversation following the email highlighted that are more structural appearance would be preferred, which meant the entire interior should be redesigned.</p>
+      <br>
+      <p>Taking this feedback on board, I finished the week off by beginning to implement a couple of changes. For a start, I deleted the surrounding fog from the scene altogether, which revealed the low poly, lack of detail humans that were once occluded by it. Seeing their flaws led me to remove the people as well, as increasing their polycount would also be tough on performance. I then began researching what else the interior of the planetarium could look like. Back to square one. I found the following references, which were nice but not too detailed for us to implement in a shorter time frame.</p>
+      <img src="/Portfolio/LiminalBlog/img/references.png">
+      <div class="caption"><label>- Ideas for new interior -</a></label></div>
+      <br>
+      <p>Right away, I opened up Blender and started drafting. Following the references above to a more minor level of detail, I was able to model a segment of the new planetarium room. I exported it, and brought it into unity, setting it up with all the relevant materials and lighting. I think it looked really well, but am still awaiting feedback from my fellow interns.</p>
+      <img src="/Portfolio/LiminalBlog/img/results.png">
+      <div class="caption"><label>- How the new interior is looking -</a></label></div>
+      <br>
+      <p>While doing this, I also discovered a few interesting techniques. Earlier in the project, we were faced with the issue of not being able to use ambient occlusion as the post-processing stack was not suitable with Liminal’s SDK. However, if I applied a black to transparent gradient, I was able to create a fake shadow, and ultimately a fake ambient occlusion effect that was far more performant. Using this, I was also able to create the shadowy doorways of the new interior, which meant we no longer suffered from fog/window clashes as I wrote in the earlier blog entries. Regardless, it was a week full of troubleshooting, but it was what the project needed. We’ll see what next week brings. </p>
+    </div>
+    <br>
+
+    <a href="/Portfolio/liminal.html" id="non-line"><button class="see-more">Go Back</button></a>
+
+  </div>
+
+</body>
