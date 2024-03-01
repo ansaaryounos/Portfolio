@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <!--Linking Stylesheet & Fonts-->
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="L-blog.css">
+  <link rel="icon" type="image/x-icon" href="img/Icons/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900
+            &family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!--Webpage Title & Favicon-->
+  <title>Liminal Blog - Week 6</title>
+
+</head>
+
+<body>
+
+  <div id="navbar-main-container">
+    
+    <div id="home-icon-container" onclick="window.open('index.html', '_self')">
+      <svg id="home-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="navbar-element">
+        <path id="Stem" class="icon" d="M917.38,320.22l232.34,451.26c-41.57,0-84.33-22.29-105.86-59.37-20.14-34.68-43.26-90.86-43.26-90.86L926.88,771.48c-23.56-32.61-34.2-95.19-10.42-139.93,14.58-27.43,46.75-83.76,46.75-83.76l-81.52-169.7c-83.1-1.15-98.34-57.87-98.34-57.87Z" transform="translate(-707.65 -317.72)"/>
+        <path id="Y" class="icon" d="M1007.83,456l67.61-135.8h132.84c-14.82,56.63-91.92,61.08-91.92,61.08L1043.41,526Z" transform="translate(-707.65 -317.72)"/>
+        <path id="A" class="icon" d="M711.87,771.48,886.89,435l37.68,77.5S842,670.72,823.38,705.53,768.65,768.9,711.87,771.48Z" transform="translate(-707.65 -317.72)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <div>
+      <h1>Week Six</h1>
+      <div class="progress">
+        <h3>05.02.24  -  09.02.24</h3>
+        <h3>170 / 200 Hours Completed</h3>
+      </div>
+      <br>
+      <p>We kicked the week off with a meeting in which we discussed any other issues that the project had, and how we were going to tackle them. Some of these issues that pertained to me included needing to resize some of the assets in the scene as they were a touch disproportionate and fixing some lighting issues. My fellow interns were responsible for fixing issues regarding the models and audio. Up until now, the floor of the planetarium consisted of the players and fellow audiences lying on simple, flat yoga mats. This is something that we wanted to change to gear towards a more museum-exhibition and homey feel. After some brainstorming, it was decided to change time into floor mattresses and make an arrangement of them on the floor for a more natural aesthetic. </p>
+      <br>
+      <img src="/Portfolio/LiminalBlog/img/floor_ref.png">
+      <div class="caption"><label>- Floor mattress references -</label></div>
+      <br>
+      <p>Another issue that had been persistent in the project was the subtitles being rendered BEHIND any transparent objects in the scene due to Unity’s default render queues (the order in which objects are rendered to the player camera, with text elements being behind transparent elements). After some research, I was able to fix this issue by quickly creating my own font material, and manually setting its render queue to be in front of any transparency. This is the successful result of doing so.</p>
+      <img src="/Portfolio/LiminalBlog/img/subtitles_fixed.png">
+      <div class="caption"><label>- Fixed the subtitles -</a></label></div>
+      <br>
+      <p>In regards to some of Adam’s feedback, our supervisor, the building had a very cool and chilling atmosphere with the excessive use of blues and whites. As a result, we decided to incorporate some warmth towards the base of the room, surrounding the player. We can do this with orange-hued lighted and red colours. We also had ideas to incorporate fairy lights and/or lanterns to add to that cosy feel.</p>
+      <br>
+      <p>The last thing that needed to be tackled that week was how to end the experience, as it simply just cuts off once all the constellations are formed. One idea that I had was to have the stars of the night sky gently fall into the room, creating a sense of awe and completion. Using Unity’s particle system, I was able to develop a prototype that was well received. This can be seen below.</p>
+      <br>
+      <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/P4LnuUe18bc" frameborder="0"> 
+      </iframe>
+      <div class="caption"><label>- Falling stars to end the experience -</a></label></div>
+      <br>
+      <p>This week at Liminal mainly consisted of me solving problems that only I knew how to, as I am going away for the next week to Sweden. I will be taking my laptop with me but will be doing a reduced amount of work, mainly providing feedback on design decisions and simple tasks.</p>
+      <br>
+
+    <a href="/Portfolio/liminal.html" id="non-line"><button class="see-more">Go Back</button></a>
+
+  </div>
+
+</body>
